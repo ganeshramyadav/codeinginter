@@ -1,4 +1,5 @@
-
+.gitignore
+/application/config/database.php
 .index.php
 .pem
 
