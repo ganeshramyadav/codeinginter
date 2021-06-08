@@ -19,21 +19,21 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-                <form role="form" action="<?php echo base_url(); ?>create" method="post">
+                <form role="form" action="<?php echo base_url(); ?>create" method="post" id="userForm">
                     <!-- text input -->
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" name="name" class="form-control" placeholder="Enter your name">
+                        <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
                     </div>
 
                     <div class="form-group">
                         <label>Contact Number</label>
-                        <input type="tel" name="mobile" class="form-control" placeholder="Enter your contact number">
+                        <input type="tel" name="mobile" class="form-control" placeholder="Enter your contact number" required>
                     </div>
 
                     <div class="form-group">
                         <label>Email</label>
-                        <input type="email" name="email" class="form-control" placeholder="Enter your contact email">
+                        <input type="email" name="email" class="form-control" placeholder="Enter your contact email" required>
                     </div>
 
                     <div class="form-group">

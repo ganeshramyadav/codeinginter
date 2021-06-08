@@ -56,6 +56,8 @@ $route['404_override'] = 'error_404';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['create'] = 'home/insertRecord';
+$route['success'] = 'home/success';
+$route['fail'] = 'home/fail';
 
 
 /*********** USER DEFINED ROUTES *******************/

@@ -52,11 +52,21 @@ class Home extends CI_Controller
 
         $save = $this->login_model->insertData('userdata',$data);
         if($save){
+            $this->success();
             setFlashData('success', "Submited Your Records!");
         } else {
+            $this->fail();
             setFlashData('error', "Somthing Went Wrong, Please Try again!");
         }
-        $this->index();
+        
+    }
+
+    public function success(){
+        $this->load->view('home/success');
+    }
+
+    public function fail(){
+        $this->load->view('home/fail');
     }
 
 
