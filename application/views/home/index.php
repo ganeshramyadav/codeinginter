@@ -141,10 +141,10 @@ img.emoji {
                             </label>
                             <div class="zf-tempContDiv zf-twoType">
                                 <div class="zf-nameWrapper">
-                                    <span> <input type="text" maxlength="255" name="Name_First" placeholder="First" fieldType=7 /> </span>
+                                    <span> <input type="text" maxlength="255" name="Name_First" placeholder="First" fieldType=7 required/> </span>
                                     </span>
                                     </span>
-                                    <span> <input type="text" maxlength="255" name="Name_Last" placeholder="Last" fieldType=7 /> </span>
+                                    <span> <input type="text" maxlength="255" name="Name_Last" placeholder="Last" fieldType=7 required/> </span>
                                     </span>
                                     </span>
                                     <div class="zf-clearBoth"></div>
@@ -159,7 +159,7 @@ img.emoji {
                             <label class="zf-labelName">Email
                                 <em class="zf-important">*</em>
                             </label>
-                            <div class="zf-tempContDiv"><span> <input fieldType=9  type="text" maxlength="255" name="Email1" checktype="c5" value=""/></span>
+                            <div class="zf-tempContDiv"><span> <input fieldType=9  type="email" maxlength="255" name="Email1" checktype="c5" value="" required/></span>
                                 <p id="Email1_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
                             </div>
                             <div class="zf-clearBoth"></div>
@@ -197,7 +197,7 @@ img.emoji {
                             </label>
                             <div class="zf-tempContDiv zf-phonefld">
                                 <div class="zf-phwrapper zf-phNumber">
-                                    <span> <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20" placeholder="Phone" checktype="c7" value="" phoneFormat="1" isCountryCodeEnabled=false fieldType="11" id="international_PhoneNumber_countrycode" valType="number" />
+                                    <span> <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20" placeholder="Phone" checktype="c7" value="" phoneFormat="1" isCountryCodeEnabled=false fieldType="11" id="international_PhoneNumber_countrycode" valType="number" required />
 <!-- <label>Number</label> -->
  </span>
                                     <div class="zf-clearBoth"></div>
