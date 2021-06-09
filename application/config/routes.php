@@ -58,6 +58,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['create'] = 'home/insertRecord';
 $route['success'] = 'home/success';
 $route['fail'] = 'home/fail';
+$route['errorMsg/(:any)'] = 'home/errorMsg';
 
 
 /*********** USER DEFINED ROUTES *******************/

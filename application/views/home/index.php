@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="shortcut icon" href="https://capitalareahomebuyers.com/wp-content/themes/capitalareahomebuyers/images/favicon.png" />
+
 
 <!-- tab color -->
 <meta name="theme-color" content="#0069a2">
@@ -68,15 +67,17 @@ img.emoji {
 <div id="page" class="site">
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container" style="position: relative;">
-		<div class="top-bar">
-			<a href="#" class="orange-small-button popupp hidden-xs" data-popup=".contact-form" style="color: #fff;font-size: 16px;position: relative;top: -2px;"></a>
-			<span style="color: #0069A2;" class="hidden-xs"> </span>
+		<div class="top-bar" style="text-align: center;">
+            <a href="<?php echo base_url(); ?>" class="orange-small-button popupp hidden-xs" data-popup=".contact-form" style="color: #fff;font-size: 16px;position: relative;top: -2px;">ASK US A QUESTION</a>
+            <span style="color: #0069A2;" class="hidden-xs"> </span>
 			<span></span>
 			<!-- <a href="tel:123123123" class="default phone-no">800-404-7184</a> -->
 		</div>
-		<div class="navbar-header">
+		<div class="navbar-header" >
 			
-			<a class="navbar-brand" style="width: 10%;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/logo-home-png-7435.png" alt="logo" class="img-responsive" />
+			<a class="navbar-brand" style="width: 15%;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/logo-home-png-7435.png" alt="logo" class="img-responsive" />            
+            </a>
+            <!-- <span>Quote on home</span> -->
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<div class="menu-primary-menu-container">
@@ -159,7 +160,7 @@ img.emoji {
                             <label class="zf-labelName">Email
                                 <em class="zf-important">*</em>
                             </label>
-                            <div class="zf-tempContDiv"><span> <input fieldType=9  type="email" maxlength="255" name="Email1" checktype="c5" value="" required/></span>
+                            <div class="zf-tempContDiv"><span> <input fieldType=9  type="text" maxlength="255" name="Email1" checktype="c5" value="" required /></span>
                                 <p id="Email1_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
                             </div>
                             <div class="zf-clearBoth"></div>
@@ -220,6 +221,7 @@ img.emoji {
         </form>
             <!-- 'zf-templateWidth' ends -->
     <script type="text/javascript">
+        
         var zf_DateRegex = new RegExp("^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$");
         var zf_MandArray = ["Name_First", "Name_Last", "Email1", "Address_AddressLine1", "Address_City", "Address_Region", "Address_ZipCode", "PhoneNumber_countrycode"];
         var zf_FieldArray = ["SingleLine", "Name_First", "Name_Last", "Email1", "Address_AddressLine1", "Address_AddressLine2", "Address_City", "Address_Region", "Address_ZipCode", "Address_Country", "PhoneNumber_countrycode"];
@@ -537,6 +539,18 @@ jQuery('.faq-list-one h2').click(function(){
     }
 });
 // chat
+        jQuery(document).ready(function(){
+            $('#form').validate({
+                errorClass: 'error',
+                messages: {
+                    Email1: {required: 'Email is required'}
+                },
+                rules: {
+                    Email1: {required:true}
+                }
+            });
+        });
+        
 
 </script>
 

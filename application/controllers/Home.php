@@ -16,6 +16,8 @@ class Home extends CI_Controller
     {
         parent::__construct();
         $this->load->model('login_model');
+        $this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
     }
 
     public function index(){
@@ -23,23 +25,6 @@ class Home extends CI_Controller
     }
 
     public function insertRecord(){
-
-        echo "<pre>";
-        print_r($this->input->post());
-        die;
-        // $this->load->library('form_validation'); 
-
-        // $this->form_validation->set_rules('Name_First','Full Name','requird');
-        // $this->form_validation->set_rules('Email1', 'Email', 'required'); 
-        // $this->form_validation->set_rules('PhoneNumber_countrycode', 'PhoneNumber', 'required|max_length[20]'); 
-        
-        // if($this->form_validation->run() != FALSE)
-        // {
-        //     $this->index();
-        //     // redirect(base_url());
-        // }else
-        // // if ($this->form_validation->run() == FALSE) 
-        // {
 
             $name       = strtolower($this->security->xss_clean($this->input->post("Name_First")));
             $lastName       = strtolower($this->security->xss_clean($this->input->post("Name_Last")));
@@ -52,10 +37,16 @@ class Home extends CI_Controller
             $zipcode    = strtolower($this->security->xss_clean($this->input->post("Address_ZipCode")));
             $country    = strtolower($this->security->xss_clean($this->input->post("Address_Country")));
 
-            // $this->load->library('form_validation');
-            // $this->form_validation->set_rules('mobile','Mobile','trim|required|number');
 
-            
+            $this->load->helper(array('form', 'url'));
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('Email1', 'Email1', 'required|valid_email');
+
+            if ($this->form_validation->run() == FALSE)
+            {
+                return $this->errorMsg('Enter the correct Email');
+            }
+         
             $data['first_name']   =   $name;
             $data['last_name']   =   $lastName;
             $data['mobile']   =   $mobile;
@@ -79,10 +70,6 @@ class Home extends CI_Controller
                 setFlashData('error', "Somthing Went Wrong, Please Try again!");
             }
 
-        // }
-        // else{
-        //     redirect(base_url());
-        // }
         
     }
 
@@ -92,6 +79,10 @@ class Home extends CI_Controller
 
     public function fail(){
         $this->load->view('home/fail');
+    }
+
+    public function errorMsg($value){
+        $this->load->view('home/errorMsg');
     }
 
 
