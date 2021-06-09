@@ -25,39 +25,62 @@ class Home extends CI_Controller
     }
 
     public function insertRecord(){
+        // $this->load->library('form_validation'); 
+
+        // $this->form_validation->set_rules('Name_First','Full Name','requird');
+        // $this->form_validation->set_rules('Email1', 'Email', 'required'); 
+        // $this->form_validation->set_rules('PhoneNumber_countrycode', 'PhoneNumber', 'required|max_length[20]'); 
         
+        // if($this->form_validation->run() != FALSE)
+        // {
+        //     $this->index();
+        //     // redirect(base_url());
+        // }else
+        // // if ($this->form_validation->run() == FALSE) 
+        // {
 
-        $name       = strtolower($this->security->xss_clean($this->input->post("name")));
-        $mobile     = strtolower($this->security->xss_clean($this->input->post("mobile")));
-        $email      = strtolower($this->security->xss_clean($this->input->post("email")));
-        $address    = strtolower($this->security->xss_clean($this->input->post("address")));
-        $city       = strtolower($this->security->xss_clean($this->input->post("city")));
-        $state      = strtolower($this->security->xss_clean($this->input->post("state")));
-        $zipcode    = strtolower($this->security->xss_clean($this->input->post("zipcode")));
+            $name       = strtolower($this->security->xss_clean($this->input->post("Name_First")));
+            $lastName       = strtolower($this->security->xss_clean($this->input->post("Name_Last")));
+            $mobile     = strtolower($this->security->xss_clean($this->input->post("PhoneNumber_countrycode")));
+            $email      = strtolower($this->security->xss_clean($this->input->post("Email1")));
+            $address    = strtolower($this->security->xss_clean($this->input->post("Address_AddressLine1")));
+            $address2    = strtolower($this->security->xss_clean($this->input->post("Address_AddressLine2")));
+            $city       = strtolower($this->security->xss_clean($this->input->post("Address_City")));
+            $state      = strtolower($this->security->xss_clean($this->input->post("Address_Region")));
+            $zipcode    = strtolower($this->security->xss_clean($this->input->post("Address_ZipCode")));
+            $country    = strtolower($this->security->xss_clean($this->input->post("Address_Country")));
 
-        // $this->load->library('form_validation');
-        // $this->form_validation->set_rules('mobile','Mobile','trim|required|number');
+            // $this->load->library('form_validation');
+            // $this->form_validation->set_rules('mobile','Mobile','trim|required|number');
 
-        
-        $data['name']   =   $name;
-        $data['mobile']   =   $mobile;
-        $data['email']   =   $email;
-        $data['address']   =   $address;
-        $data['city']   =   $city;
-        $data['state']   =   $state;
-        $data['zipcode']   =   $zipcode;
-        $data['comments']   =   '$comments';
-        $data['created_at'] = date('Y-m-d H:i:s');
-        
+            
+            $data['first_name']   =   $name;
+            $data['last_name']   =   $lastName;
+            $data['mobile']   =   $mobile;
+            $data['email']   =   $email;
+            $data['address']   =   $address;
+            $data['address_one']   =   $address2;
+            $data['city']   =   $city;
+            $data['state']   =   $state;
+            $data['zipcode']   =   $zipcode;
+            $data['country']   =   $country;
+            $data['comments']   =   '$comments';
+            $data['created_at'] = date('Y-m-d H:i:s');
+            
 
-        $save = $this->login_model->insertData('userdata',$data);
-        if($save){
-            $this->success();
-            setFlashData('success', "Submited Your Records!");
-        } else {
-            $this->fail();
-            setFlashData('error', "Somthing Went Wrong, Please Try again!");
-        }
+            $save = $this->login_model->insertData('userdata',$data);
+            if($save){
+                $this->success();
+                setFlashData('success', "Submited Your Records!");
+            } else {
+                $this->fail();
+                setFlashData('error', "Somthing Went Wrong, Please Try again!");
+            }
+
+        // }
+        // else{
+        //     redirect(base_url());
+        // }
         
     }
 
