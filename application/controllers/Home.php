@@ -16,12 +16,10 @@ class Home extends CI_Controller
     {
         parent::__construct();
         $this->load->model('login_model');
-        // $this->set_timezone();
     }
 
     public function index(){
         $this->load->view('home/index');
-        // $this->loadViews("dashboard", $this->global, NULL , NULL);
     }
 
     public function insertRecord(){

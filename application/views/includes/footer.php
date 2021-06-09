@@ -2,9 +2,9 @@
 
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b></b> Admin System | Version 1.5
+          <b></b> Admin System 
         </div>
-        
+        <strong>Copyright &copy; 2020-2021 <a href="<?php echo base_url(); ?>">Quote on Homes </a>.</strong> All rights reserved.
     </footer>
     
     <script src="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
