@@ -57,7 +57,7 @@ img.emoji {
 }
 </style>
 
-<script src="https://unpkg.com/autonumeric"></script>
+
 	<link rel='stylesheet' id='wp-block-library-css'  href='<?php echo base_url(); ?>assets/quote/css/style2.min.css?ver=5.6.2' type='text/css' media='all' />
 
 

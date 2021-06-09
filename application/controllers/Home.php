@@ -23,6 +23,10 @@ class Home extends CI_Controller
     }
 
     public function insertRecord(){
+
+        echo "<pre>";
+        print_r($this->input->post());
+        die;
         // $this->load->library('form_validation'); 
 
         // $this->form_validation->set_rules('Name_First','Full Name','requird');
