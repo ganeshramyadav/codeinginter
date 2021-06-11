@@ -57,7 +57,7 @@ class Home extends CI_Controller
             $data['state']   =   $state;
             $data['zipcode']   =   $zipcode;
             $data['country']   =   $country;
-            $data['comments']   =   '$comments';
+            $data['comments']   =   '';
             $data['created_at'] = date('Y-m-d H:i:s');
             
 

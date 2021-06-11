@@ -2,7 +2,8 @@
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 5.5.5-10.4.19-MariaDB : Database - ci
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -12,9 +13,9 @@ MySQL - 5.5.5-10.4.19-MariaDB : Database - ci
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`ci` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+-- CREATE DATABASE /*!32312 IF NOT EXISTS*/`ci` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 
-USE `ci`;
+USE `codeigniter`;
 
 /*Table structure for table `ci_sessions` */
 
@@ -46,11 +47,11 @@ CREATE TABLE `tbl_last_login` (
   `platform` varchar(128) NOT NULL,
   `createdDtm` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 /*Data for the table `tbl_last_login` */
 
-insert  into `tbl_last_login`(`id`,`userId`,`sessionData`,`machineIp`,`userAgent`,`agentString`,`platform`,`createdDtm`) values (1,1,'{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}','::1','Chrome 91.0.4472.77','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36','Windows 10','2021-06-04 13:38:38'),(2,3,'{\"role\":\"3\",\"roleText\":\"Employee\",\"name\":\"Employee\"}','::1','Chrome 91.0.4472.77','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36','Windows 10','2021-06-05 00:33:13'),(3,1,'{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}','::1','Chrome 91.0.4472.77','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36','Windows 10','2021-06-05 00:34:47');
+insert  into `tbl_last_login`(`id`,`userId`,`sessionData`,`machineIp`,`userAgent`,`agentString`,`platform`,`createdDtm`) values (1,1,'{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}','::1','Chrome 91.0.4472.77','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36','Windows 10','2021-06-04 13:38:38'),(2,3,'{\"role\":\"3\",\"roleText\":\"Employee\",\"name\":\"Employee\"}','::1','Chrome 91.0.4472.77','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36','Windows 10','2021-06-05 00:33:13'),(3,1,'{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}','::1','Chrome 91.0.4472.77','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36','Windows 10','2021-06-05 00:34:47'),(4,1,'{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}','::1','Chrome 91.0.4472.77','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36','Windows 10','2021-06-06 21:51:36'),(5,1,'{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}','::1','Chrome 91.0.4472.77','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36','Windows 10','2021-06-08 21:18:12'),(6,1,'{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}','::1','Chrome 91.0.4472.77','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36','Windows 10','2021-06-10 00:02:34');
 
 /*Table structure for table `tbl_reset_password` */
 
@@ -115,22 +116,23 @@ DROP TABLE IF EXISTS `userdata`;
 
 CREATE TABLE `userdata` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(20) DEFAULT NULL,
-  `email` varchar(20) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
   `mobile` int(11) DEFAULT NULL,
-  `state` varchar(20) DEFAULT NULL,
-  `city` varchar(30) DEFAULT NULL,
-  `address` varchar(100) DEFAULT NULL,
+  `state` varchar(200) DEFAULT NULL,
+  `city` varchar(200) DEFAULT NULL,
+  `address` text DEFAULT NULL,
+  `address_one` text DEFAULT NULL,
   `zipcode` varchar(10) DEFAULT NULL,
+  `country` varchar(200) DEFAULT NULL,
   `comments` text DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `userdata` */
-
-insert  into `userdata`(`id`,`name`,`email`,`mobile`,`state`,`city`,`address`,`zipcode`,`comments`,`created_at`,`updated_at`) values (1,'ganesh yadav','test@gmail.com',2147483647,'1','bhilai','ruabandha sector bhilai','490006',NULL,'2021-06-05 00:17:55',NULL),(2,'ganesh yadav','test@gmail.com',2147483647,'1','bhilai','ruabandha sector bhilai','490006',NULL,'2021-06-05 00:18:42',NULL),(3,'ganesh yadav','test@gmail.com',2147483647,'1','bhilai','ruabandha sector bhilai','490006','$comments','2021-06-05 00:20:58',NULL);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
