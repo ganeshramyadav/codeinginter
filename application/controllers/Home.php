@@ -47,18 +47,19 @@ class Home extends CI_Controller
                 return $this->errorMsg('Enter the correct Email');
             }
          
-            $data['first_name']   =   $name;
-            $data['last_name']   =   $lastName;
-            $data['mobile']   =   $mobile;
-            $data['email']   =   $email;
-            $data['address']   =   $address;
-            $data['address_one']   =   $address2;
-            $data['city']   =   $city;
-            $data['state']   =   $state;
-            $data['zipcode']   =   $zipcode;
-            $data['country']   =   $country;
-            $data['comments']   =   '';
+            $data['first_name']     =   $name;
+            $data['mobile']         =   $mobile;
+            $data['email']          =   $email;
+            $data['address']        =   $address;
+            $data['zipcode']        =   $zipcode;
+            $data['sms']            =   '';
             $data['created_at'] = date('Y-m-d H:i:s');
+
+            // $data['last_name']      =   $lastName;
+            // $data['address_one']    =   $address2;
+            // $data['city']           =   $city;
+            // $data['state']          =   $state;
+            // $data['country']        =   $country;
             
 
             $save = $this->login_model->insertData('userdata',$data);

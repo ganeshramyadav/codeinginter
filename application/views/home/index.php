@@ -142,11 +142,10 @@ img.emoji {
                             </label>
                             <div class="zf-tempContDiv zf-twoType">
                                 <div class="zf-nameWrapper">
-                                    <span> <input type="text" maxlength="255" name="Name_First" placeholder="First" fieldType=7 required/> </span>
+                                    <span> <input type="text" maxlength="255" name="Name_First" placeholder="Full Name" fieldType=7 required/> </span>
                                     </span>
                                     </span>
-                                    <span> <input type="text" maxlength="255" name="Name_Last" placeholder="Last" fieldType=7 required/> </span>
-                                    </span>
+                                    
                                     </span>
                                     <div class="zf-clearBoth"></div>
                                 </div>
@@ -174,16 +173,16 @@ img.emoji {
                             </label>
                             <div class="zf-tempContDiv zf-address">
                                 <div class="zf-addrCont">
-                                    <span class="zf-addOne"> <input type="text" maxlength="255" name="Address_AddressLine1" placeholder="Street Address" checktype="c1" value="" /></span>
-                                    <span class="zf-addOne"> <input type="text" maxlength="255" name="Address_AddressLine2" placeholder="Address Line 2" checktype="c1"/></span>
-                                    <span class="zf-flLeft zf-addtwo"> <input type="text" maxlength="255" name="Address_City" placeholder="City" checktype="c1" value=""/></span>
-                                    <span class="zf-flLeft zf-addtwo"> <input type="text" maxlength="255" name="Address_Region" placeholder="State/Region/Province" checktype="c1" value=""/> </span>
+                                    <span class="zf-addOne"> <input type="text" maxlength="255" name="Address_AddressLine1" placeholder="Address" checktype="c1" value="" /></span>
+                                    <!-- <span class="zf-addOne"> <input type="text" maxlength="255" name="Address_AddressLine2" placeholder="Address Line 2" checktype="c1"/></span> -->
+                                    <!-- <span class="zf-flLeft zf-addtwo"> <input type="text" maxlength="255" name="Address_City" placeholder="City" checktype="c1" value=""/></span> -->
+                                    <!-- <span class="zf-flLeft zf-addtwo"> <input type="text" maxlength="255" name="Address_Region" placeholder="State/Region/Province" checktype="c1" value=""/> </span> -->
                                     <span class="zf-flLeft zf-addtwo"> <input type="text" maxlength="255" name="Address_ZipCode" placeholder="Postal / Zip Code" checktype="c1" value=""/></span>
-                                    <span class="zf-flLeft zf-addtwo"> <select class="zf-form-sBox" name="Address_Country" checktype="c1"><option>-Select-</option>
-                                        <option selected>United States</option>
-                            </select>
-                        <!-- <label>Country</label>  -->
-                        </span>
+                                    <!-- <span class="zf-flLeft zf-addtwo"> 
+                                        <select class="zf-form-sBox" name="Address_Country" checktype="c1"><option>-Select-</option>
+                                            <option selected>United States</option>
+                                        </select>
+                                    </span> -->
                                     <div class="zf-clearBoth"></div>
                                     <p id="Address_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
                                 </div>

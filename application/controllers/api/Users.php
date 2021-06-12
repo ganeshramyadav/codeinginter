@@ -54,9 +54,9 @@ class Users extends REST_Controller {
     public function index_put($id)
     {
         $input = $this->put();
-        $this->db->update('products', $input, array('id'=>$id));
+        $this->db->update('userdata', $input, array('id'=>$id));
      
-        $this->response(['Product updated successfully.'], REST_Controller::HTTP_OK);
+        $this->response(['User Data updated successfully.'], REST_Controller::HTTP_OK);
     }
      
     /**
@@ -66,9 +66,9 @@ class Users extends REST_Controller {
     */
     public function index_delete($id)
     {
-        $this->db->delete('products', array('id'=>$id));
+        $this->db->delete('userdata', array('id'=>$id));
        
-        $this->response(['Product deleted successfully.'], REST_Controller::HTTP_OK);
+        $this->response(['User Data deleted successfully.'], REST_Controller::HTTP_OK);
     }
     	
 }

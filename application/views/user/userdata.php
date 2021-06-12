@@ -58,14 +58,15 @@
                   <table class="table table-hover">
                     <tr>
                         <th>First Name</th>
-                        <th>Last Name</th>
+                        <!-- <th>Last Name</th> -->
                         <th>Email</th>
                         <th>Mobile</th>
-                        <th>Address Line1</th>
-                        <th>Address Line2</th>
-                        <th>city</th>
-                        <th>State</th>
-                        <th>Country</th>
+                        <th>Address</th>
+                        <!-- <th>Address Line2</th> -->
+                        <!-- <th>city</th> -->
+                        <!-- <th>State</th> -->
+                        <!-- <th>Country</th> -->
+                        <th>Sms</th>
                         <th>zipcode</th>
                         <th>Created On</th>
                     </tr>
@@ -77,14 +78,15 @@
                     ?>
                     <tr>
                         <td><?php echo $record->first_name ?></td>
-                        <td><?php echo $record->last_name ?></td>
+                        <!-- <td><?php //echo $record->last_name ?></td> -->
                         <td><?php echo $record->email ?></td>
                         <td><?php echo $record->mobile ?></td>
                         <td><?php echo $record->address ?></td>
-                        <td><?php echo $record->address_one ?></td>
-                        <td><?php echo $record->city ?></td>
-                        <td><?php echo $record->state ?></td>
-                        <td><?php echo $record->country ?></td>
+                        <!-- <td><?php //echo $record->address_one ?></td> -->
+                        <!-- <td><?php //echo $record->city ?></td> -->
+                        <!-- <td><?php //echo $record->state ?></td> -->
+                        <!-- <td><?php //echo $record->country ?></td> -->
+                        <td><?php echo $record->sms ?></td>
                         <td><?php echo $record->zipcode ?></td>
                         
                         <td><?php echo date("d-m-Y", strtotime($record->created_at)) ?></td>
