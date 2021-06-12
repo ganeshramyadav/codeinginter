@@ -27,8 +27,8 @@ class User extends BaseController
      */
     public function index()
     {
+        redirect('userdataListing');
         $this->global['pageTitle'] = 'Dashboard';
-        
         $this->loadViews("dashboard", $this->global, NULL , NULL);
     }
     
