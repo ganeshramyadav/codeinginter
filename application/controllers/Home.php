@@ -16,8 +16,10 @@ class Home extends CI_Controller
     {
         parent::__construct();
         $this->load->model('login_model');
+        $this->load->model('userdata_model');
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
+        
     }
 
     public function index(){
@@ -38,14 +40,15 @@ class Home extends CI_Controller
             $country    = strtolower($this->security->xss_clean($this->input->post("Address_Country")));
 
 
-            $this->load->helper(array('form', 'url'));
-            $this->load->library('form_validation');
-            $this->form_validation->set_rules('Email1', 'Email1', 'required|valid_email');
+            // $this->load->helper(array('form', 'url'));
 
-            if ($this->form_validation->run() == FALSE)
-            {
-                return $this->errorMsg('Enter the correct Email');
-            }
+            // $this->load->library('form_validation');
+            // $this->form_validation->set_rules('Email1', 'Email1', 'required|valid_email');
+
+            // if ($this->form_validation->run() == FALSE)
+            // {
+            //     return $this->errorMsg('Enter the correct Email');
+            // }
          
             $data['first_name']     =   $name;
             $data['mobile']         =   $mobile;
@@ -72,6 +75,29 @@ class Home extends CI_Controller
             }
 
         
+    }
+
+    /**
+     * This function is used to delete the user using userId
+     * @return boolean $result : TRUE / FALSE
+     */
+    function deleteUserData()
+    {
+        // print_r ($this->session->userdata('role')) ;
+        // print_r ($this->session->userdata('userId')) ;
+
+        if($this->session->userdata('role') != 1)
+        {
+            echo(json_encode(array('status'=>'access denide')));
+        }
+        else
+        {
+            $userId = $this->input->post('userId');
+            $result = $this->userdata_model->deleteData($userId);
+            
+            if ($result > 0) { echo(json_encode(array('status'=>TRUE))); }
+            else { echo(json_encode(array('status'=>FALSE))); }
+        }
     }
 
     public function success(){

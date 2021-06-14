@@ -63,7 +63,7 @@ $route['create'] = 'home/insertRecord';
 $route['success'] = 'home/success';
 $route['fail'] = 'home/fail';
 $route['errorMsg/(:any)'] = 'home/errorMsg';
-
+$route['userData/delete'] = 'home/deleteUserData';
 
 /*********** USER DEFINED ROUTES *******************/
 
@@ -74,6 +74,7 @@ $route['logout'] = 'user/logout';
 
 $route['userdataListing'] = 'user/userdataListing';
 $route['userdataListing/(:num)'] = "user/userdataListing/$1";
+
 
 $route['userListing'] = 'user/userListing';
 $route['userListing/(:num)'] = "user/userListing/$1";

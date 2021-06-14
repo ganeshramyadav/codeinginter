@@ -16,7 +16,7 @@
 
 
 <link href="<?php echo base_url(); ?>assets/quote/css/bootstrap.min.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/quote/css/fonts.css" rel="stylesheet">
+<!-- <link href="<?php //echo base_url(); ?>assets/quote/css/fonts.css" rel="stylesheet"> -->
 <link href="<?php echo base_url(); ?>assets/quote/css/style.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/quote/css/animate.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/quote/css/radio.css" rel="stylesheet" media="screen">
@@ -65,17 +65,16 @@ img.emoji {
 <body class="page-template page-template-form1 page-template-form1-php page page-id-2461">
 
 <div id="page" class="site">
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #f7f7f7;">
 	<div class="container" style="position: relative;">
 		<div class="top-bar" style="text-align: center;">
             <a href="<?php echo base_url(); ?>" class="orange-small-button popupp hidden-xs" data-popup=".contact-form" style="color: #fff;font-size: 16px;position: relative;top: -2px;">ASK US A QUESTION</a>
             <span style="color: #0069A2;" class="hidden-xs"> </span>
 			<span></span>
-			<!-- <a href="tel:123123123" class="default phone-no">800-404-7184</a> -->
 		</div>
 		<div class="navbar-header" >
 			
-			<a class="navbar-brand" style="width: 15%;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/logo-home-png-7435.png" alt="logo" class="img-responsive" />            
+			<a class="navbar-brand" style="max-width: 100px; height: auto;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/logo-home-png-7435.png" alt="logo" class="img-responsive" />            
             </a>
             <!-- <span>Quote on home</span> -->
 		</div>
@@ -84,12 +83,11 @@ img.emoji {
             <ul id="menu-primary-menu" class="nav navbar-nav navbar-right">
             
             <li id="menu-item-2239" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2239">
-            <a href="<?php echo base_url(); ?>">Home</a>
+            
             
             </li>
 
-            <li id="menu-item-2727" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2727"><a href="<?php echo base_url(); ?>login">Login</a>
-            </li>
+           
             
             </ul>
 
@@ -110,7 +108,7 @@ img.emoji {
 <link href="<?php echo base_url(); ?>assets/quote/css/zoho_form.css" rel="stylesheet" type="text/css">
 <script src="<?php echo base_url(); ?>assets/quote/js/zoho_validation.js"></script>
 
-<section class="forms-section" style="background: #f7f7f7">
+<section class="forms-section" style="background: #ffffff">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 text-center">
@@ -118,151 +116,55 @@ img.emoji {
                 <p>Please fill out the form below, and one of our acquisition specialists will contact you shortly.</p>
 			</div>
 		</div>
-	</div>
-</section>
-<section class="big-form-full" style="background: #f7f7f7">
-	<div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                            </div>
+        <div class="container " style="">
+            <!-- <div class="row"> -->
+                <form action='<?php echo base_url(); ?>create' name='form' method='POST' id='form' style="max-width: 800px;margin: auto; background: #fff;">
+                    
+                            
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        <label for="fullname">Full Name</label>
+                            <input type="text" class="form-control" name="Name_First" id="fullname" placeholder="Full Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="Email1" id="email" placeholder="Email">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="mobile">Mobile</label>
+                            <input type="tel" class="form-control" id="mobile" name ="PhoneNumber_countrycode" placeholder="Mobile">
+                        </div>
+                        <div class="form-group col-md-6">
+                        <label for="inputZip">Zip Code</label>
+                        <input type="text" class="form-control" name="Address_ZipCode" id="inputZip">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="inputAddress">Address</label>
+                            <input type="text" class="form-control" id="inputAddress" name ="Address_AddressLine1" placeholder="Address">
+                        </div>
+                    </div>
+
+                    <div class="form-row row">
+                        <div class="form-group col-md-4 col-md-offset-4">
+                            <button class=" blue-submit-button">Submit</button>
+                        </div>
+                    </div>
+
+                    
+                        
+                </form>
+            <!-- </div> -->
         </div>
-    </div>
-	<div class="container">
-
-    <form action='<?php echo base_url(); ?>create' name='form' method='POST' id='form' style="max-width: 800px;margin: auto;padding: 20px;background: #fff;">
-            <div class="zf-templateWrapper">
-                <!---------template Container Starts Here---------->
-                <div class="zf-subContWrap zf-topAlign">
-                    <ul>
-                        <!---------Name Starts Here---------->
-                        <input type="hidden" name="SingleLine" checktype="c1" value="Capital Area Emails" maxlength="255" fieldType=1 class="visibly-hidden" />
-                        <li class="zf-tempFrmWrapper zf-name zf-namemedium">
-                            <label class="zf-labelName">Full name
-                                <em class="zf-important">*</em>
-                            </label>
-                            <div class="zf-tempContDiv zf-twoType">
-                                <div class="zf-nameWrapper">
-                                    <span> <input type="text" maxlength="255" name="Name_First" placeholder="Full Name" fieldType=7 required/> </span>
-                                    </span>
-                                    </span>
-                                    
-                                    </span>
-                                    <div class="zf-clearBoth"></div>
-                                </div>
-                                <p id="Name_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
-                            </div>
-                            <div class="zf-clearBoth"></div>
-                        </li>
-                        <!---------Name Ends Here---------->
-                        <!---------Email Starts Here---------->
-                        <li class="zf-tempFrmWrapper zf-small">
-                            <label class="zf-labelName">Email
-                                <em class="zf-important">*</em>
-                            </label>
-                            <div class="zf-tempContDiv"><span> <input fieldType=9  type="text" maxlength="255" name="Email1" checktype="c5" value="" required /></span>
-                                <p id="Email1_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
-                            </div>
-                            <div class="zf-clearBoth"></div>
-                        </li>
-                        <!---------Email Ends Here---------->
-                        <!--address-->
-                        <!---------Address Starts Here---------->
-                        <li class="zf-tempFrmWrapper zf-address zf-addrlarge ">
-                            <label class="zf-labelName">Address
-                                <em class="zf-important">*</em>
-                            </label>
-                            <div class="zf-tempContDiv zf-address">
-                                <div class="zf-addrCont">
-                                    <span class="zf-addOne"> <input type="text" maxlength="255" name="Address_AddressLine1" placeholder="Address" checktype="c1" value="" /></span>
-                                    <!-- <span class="zf-addOne"> <input type="text" maxlength="255" name="Address_AddressLine2" placeholder="Address Line 2" checktype="c1"/></span> -->
-                                    <!-- <span class="zf-flLeft zf-addtwo"> <input type="text" maxlength="255" name="Address_City" placeholder="City" checktype="c1" value=""/></span> -->
-                                    <!-- <span class="zf-flLeft zf-addtwo"> <input type="text" maxlength="255" name="Address_Region" placeholder="State/Region/Province" checktype="c1" value=""/> </span> -->
-                                    <span class="zf-flLeft zf-addtwo"> <input type="text" maxlength="255" name="Address_ZipCode" placeholder="Postal / Zip Code" checktype="c1" value=""/></span>
-                                    <!-- <span class="zf-flLeft zf-addtwo"> 
-                                        <select class="zf-form-sBox" name="Address_Country" checktype="c1"><option>-Select-</option>
-                                            <option selected>United States</option>
-                                        </select>
-                                    </span> -->
-                                    <div class="zf-clearBoth"></div>
-                                    <p id="Address_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
-                                </div>
-                            </div>
-                            <div class="zf-eclearBoth"></div>
-                        </li>
-                        <!---------Address Ends Here---------->
-                        <!---------Phone Starts Here---------->
-                        <li class="zf-tempFrmWrapper zf-small">
-                            <label class="zf-labelName">Phone Number
-                                <em class="zf-important">*</em>
-                            </label>
-                            <div class="zf-tempContDiv zf-phonefld">
-                                <div class="zf-phwrapper zf-phNumber">
-                                    <span> <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" maxlength="20" placeholder="Phone" checktype="c7" value="" phoneFormat="1" isCountryCodeEnabled=false fieldType="11" id="international_PhoneNumber_countrycode" valType="number" required />
-<!-- <label>Number</label> -->
- </span>
-                                    <div class="zf-clearBoth"></div>
-                                </div>
-                                <p id="PhoneNumber_error" class="zf-errorMessage" style="display:none;">Invalid value</p>
-                            </div>
-                            <div class="zf-clearBoth"></div>
-                        </li>
-                        <!---------Phone Ends Here---------->
-                    </ul>
-                </div>
-                <!---------template Container Starts Here---------->
-                <ul>
-                    <li class="zf-fmFooter">
-                        <button class="zf-submitColor blue-submit-button">Submit</button>
-                    </li>
-                </ul>
-            </div>
-            <!-- 'zf-templateWrapper' ends -->
-        </form>
-            <!-- 'zf-templateWidth' ends -->
-    <script type="text/javascript">
-        
-        var zf_DateRegex = new RegExp("^(([0][1-9])|([1-2][0-9])|([3][0-1]))[-](Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec|JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)[-](?:(?:19|20)[0-9]{2})$");
-        var zf_MandArray = ["Name_First", "Name_Last", "Email1", "Address_AddressLine1", "Address_City", "Address_Region", "Address_ZipCode", "PhoneNumber_countrycode"];
-        var zf_FieldArray = ["SingleLine", "Name_First", "Name_Last", "Email1", "Address_AddressLine1", "Address_AddressLine2", "Address_City", "Address_Region", "Address_ZipCode", "Address_Country", "PhoneNumber_countrycode"];
-        var isSalesIQIntegrationEnabled = false;
-        var salesIQFieldsArray = [];
-    </script>
-
-    </div>
 	</div>
 </section>
 
-<script>
-jQuery('#autocomplete').change(function(){
-    jQuery('.hidden_field').slideDown();
-    setTimeout(function(){
-        jQuery('#address_visible').val(jQuery('#AddressLine').val());
-        jQuery('#city_visible').val(jQuery('#City').val());
-        jQuery('#zip_visible').val(jQuery('#Zip').val());
-        jQuery('#state_visible').val(jQuery('#State').val());        
-    },500);
 
-    jQuery(this).parent().hide();
-});
-</script>
-
-
-<footer>
-	
-	<div class="container-fluid footer-bottom">
-		<div class="row">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<p>Copyright 2020 © Quote on home</p>
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-	
-</footer>
 
 
 
@@ -271,44 +173,7 @@ jQuery('#autocomplete').change(function(){
 <script src="<?php echo base_url(); ?>assets/quote/js/custom.js"></script>
 <script>
 jQuery(document).ready(function(){
-    if(jQuery('.home-seen-slider').length){
-        var swiper = new Swiper('.home-seen-slider', {
-            slidesPerView: 5,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: {
-                delay: 1,
-            },
-            freeMode: true,
-            speed: 5000,
-            breakpoints: {
-                300: {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                },
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                1366: {
-                    slidesPerView: 4,
-                    spaceBetween: 20,
-                },
-                1440: {
-                    slidesPerView: 5,
-                    spaceBetween: 20,
-                },
-            }
-        });
-    }
+    
     if(jQuery('.home-testimonials').length){
         var swiper = new Swiper('.home-testimonials', {
             slidesPerView: 1,
@@ -537,21 +402,26 @@ jQuery('.faq-list-one h2').click(function(){
         jQuery(this).next().slideDown();
     }
 });
-// chat
-        jQuery(document).ready(function(){
-            $('#form').validate({
-                errorClass: 'error',
-                messages: {
-                    Email1: {required: 'Email is required'}
-                },
-                rules: {
-                    Email1: {required:true}
-                }
-            });
-        });
+
         
 
 </script>
 
 </body>
+
+    <footer style="bottom: 0; position: fixed; width: 100%;">
+        
+        <div class="container-fluid footer-bottom">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Copyright 2020 © Quote on home</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
 </html>

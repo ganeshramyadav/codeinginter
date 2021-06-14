@@ -306,9 +306,9 @@ textarea.wpcf7-textarea {
 	bottom: 0;
 	right: 0;
 }
-body.drawerScrolled {
+/* body.drawerScrolled {
 	padding-bottom: 65px;
-}
+} */
 h1.entry-title {
     font-size: 40px;
     font-family: proximaB;
@@ -691,11 +691,12 @@ textarea + .input__label {
 	padding: 30px 70px;
 	overflow: hidden;
 }
-.big-form-full {
+/* .big-form-full {
     padding-bottom: 100px;
-}
+} */
 .forms-section {
-	padding: 80px 0 30px;
+	/* padding: 80px 0 30px; */
+	padding-top: 20px;
 }
 .big-title-forms {
 	font-size: 40px;
@@ -1515,7 +1516,7 @@ a.cart-button.active span, a.cart-button:hover span{
 }
 footer, .footer-social {
 	background: #fff;
-	padding: 50px 0 0;
+	/* padding: 50px 0 0; */
 	color: #333;
 	border-top: 1px solid #dadada;
 }
@@ -1965,7 +1966,8 @@ footer .col-md-2 {
 	padding-top: 20px !important
 }
 body {
-	padding-bottom: 90px !important;
+	padding-bottom: 0px !important;
+	/* padding-bottom: 90px !important; */
 }
 .sitemap-menu li a.footer-title, .footer-title {
     padding-top: 40px;

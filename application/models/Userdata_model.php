@@ -56,4 +56,9 @@ class Userdata_model extends CI_Model
         return $result;
     }
 
+    public function deleteData($id){
+        $result = $this->db->delete('userdata', array('id'=>$id));
+        return $result;
+    }
+
 }

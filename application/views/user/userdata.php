@@ -41,17 +41,29 @@
         <div class="row">
             <div class="col-xs-12">
               <div class="box">
-                <div class="box-header">
-                    <h3 class="box-title">Users Data List</h3>
+                <div class="box-header with-border">
+                    <!-- <h3 class="box-title">Users Data List</h3> -->
+                    <br>
                     <div class="box-tools">
-                        <form action="<?php echo base_url() ?>userdataListing" method="POST" id="searchList">
-                            <div class="input-group">
-                              <input type="text" name="searchText" value="<?php echo $searchText; ?>" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search"/>
-                              <div class="input-group-btn">
-                                <button class="btn btn-sm btn-default searchList"><i class="fa fa-search"></i></button>
-                              </div>
+                        <div class="row">
+                            <div class="col-md-6" >
+                                <!-- <div class="input-group-btn">
+                                    <a href="<?php base_url()?>export/export" class="btn btn-success btn-sm">Export</a>
+                                </div> -->
                             </div>
-                        </form>
+                            <!-- https://xpertphp.com/how-to-export-data-in-excel-and-csv-files-using-codeigniter/ -->
+                            <div class="col-md-6">
+                                <form action="<?php echo base_url() ?>userdataListing" method="POST" id="searchList">
+                                    <div class="input-group">
+                                    <input type="text" name="searchText" value="<?php echo $searchText; ?>" class="form-control input-sm pull-right" placeholder="Search"/>
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-default searchList"><i class="fa fa-search"></i></button>
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                           
+                        </div>
                     </div>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive no-padding">
@@ -69,6 +81,7 @@
                         <th>Sms</th>
                         <th>zipcode</th>
                         <th>Created On</th>
+                        <th>Action</th>
                     </tr>
                     <?php
                     if(!empty($userRecords))
@@ -90,7 +103,10 @@
                         <td><?php echo $record->zipcode ?></td>
                         
                         <td><?php echo date("d-m-Y", strtotime($record->created_at)) ?></td>
-                        
+                        <td class="text-center">
+                            
+                            <a class="btn btn-sm btn-danger deleteUsers" href="#" data-userid="<?php echo $record->id; ?>" title="Delete"><i class="fa fa-trash"></i></a>
+                        </td>
                     </tr>
                     <?php
                         }
@@ -116,6 +132,29 @@
             var value = link.substring(link.lastIndexOf('/') + 1);
             jQuery("#searchList").attr("action", baseURL + "userdataListing/" + value);
             jQuery("#searchList").submit();
+        });
+
+        jQuery(document).on("click", ".deleteUsers", function(){
+            var userId = $(this).data("userid"),
+                hitURL = baseURL + "userData/delete",
+                currentRow = $(this);
+            var confirmation = confirm("Are you sure to delete this user data ?");
+            
+            if(confirmation)
+            {
+                jQuery.ajax({
+                type : "POST",
+                dataType : "json",
+                url : hitURL,
+                data : { userId : userId } 
+                }).done(function(data){
+                    console.log(data);
+                    currentRow.parents('tr').remove();
+                    if(data.status == true) { alert("User data successfully deleted"); }
+                    else if(data.status == false) { alert("User data deletion failed"); }
+                    else { alert("Access denied..!"); }
+                });
+            }
         });
     });
 </script>
