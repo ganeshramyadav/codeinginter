@@ -74,7 +74,7 @@ img.emoji {
 		</div>
 		<div class="navbar-header" >
 			
-			<a class="navbar-brand" style="max-width: 100px; height: auto;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/logo-home-png-7435.png" alt="logo" class="img-responsive" />            
+			<a class="navbar-brand" style="max-width: 140px; height: auto;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/logo-home-png-7435.png" alt="logo" class="img-responsive" />            
             </a>
             <!-- <span>Quote on home</span> -->
 		</div>
@@ -108,7 +108,7 @@ img.emoji {
 <link href="<?php echo base_url(); ?>assets/quote/css/zoho_form.css" rel="stylesheet" type="text/css">
 <script src="<?php echo base_url(); ?>assets/quote/js/zoho_validation.js"></script>
 
-<section class="forms-section" style="background: #ffffff">
+<section class="forms-section" style="background: #ffffff; max-height: calc(90vh - 100px); overflow: auto;">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 text-center">
@@ -138,8 +138,8 @@ img.emoji {
                             <input type="tel" class="form-control" id="mobile" name ="PhoneNumber_countrycode" placeholder="Mobile">
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="inputZip">Zip Code</label>
-                        <input type="text" class="form-control" name="Address_ZipCode" id="inputZip">
+                            <label for="inputZip">Zip Code</label>
+                            <input type="text" class="form-control" name="Address_ZipCode" id="inputZip">
                         </div>
                     </div>
 

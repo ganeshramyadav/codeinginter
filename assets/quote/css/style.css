@@ -99,7 +99,8 @@
 body:not(.home) .navbar-default {
     background: #fff;
     border-color: transparent;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
+    padding-bottom: 33px;
     min-height: 0;
 }
 body:not(.home) #page {
@@ -1833,7 +1834,7 @@ img.alignright {
     display: block;
     text-align: center;
     margin: 0 -15px;
-    border-bottom: 1px solid #dadada;
+    /* border-bottom: 1px solid #dadada; */
 }
 .orange-button {
     display: inline-block;
