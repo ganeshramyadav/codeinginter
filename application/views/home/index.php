@@ -152,7 +152,7 @@ img.emoji {
                     </div>
 
                     <div class="form-row row">
-                        <div class="form-group col-md-4 col-md-offset-4">
+                        <div class="form-group col-md-4 col-md-offset-4" style="text-align: center;">
                             <button class=" blue-submit-button">Submit</button>
                         </div>
                     </div>
