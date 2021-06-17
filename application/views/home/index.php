@@ -38,6 +38,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 
+<link rel = "icon" href = "<?php echo base_url(); ?>assets/quote/image/logo-home-png-7435.png" type = "image/*">
 <title>Describe Your Property &#8211; Quote on home</title>
 
 		
