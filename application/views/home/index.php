@@ -75,7 +75,7 @@ img.emoji {
 		</div>
 		<div class="navbar-header" >
 			
-			<a class="navbar-brand" style="max-width: 140px; height: auto;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/cut-power-build.png" alt="logo" class="img-responsive" />            
+			<a class="navbar-brand" style="max-width: 95px; height: auto;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/cut-power-build.png" alt="logo" class="img-responsive" />            
             </a>
             
 		</div>
