@@ -38,8 +38,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 
-<link rel = "icon" href = "<?php echo base_url(); ?>assets/quote/image/logo-home-png-7435.png" type = "image/*">
-<title>Describe Your Property &#8211; Quote on home</title>
+<link rel = "icon" href = "<?php echo base_url(); ?>assets/quote/image/cut-power-build.png" type = "image/*">
+<title>Cut Power Build</title>
 
 		
 		<style type="text/css">
@@ -75,9 +75,9 @@ img.emoji {
 		</div>
 		<div class="navbar-header" >
 			
-			<a class="navbar-brand" style="max-width: 140px; height: auto;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/logo-home-png-7435.png" alt="logo" class="img-responsive" />            
+			<a class="navbar-brand" style="max-width: 140px; height: auto;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/cut-power-build.png" alt="logo" class="img-responsive" />            
             </a>
-            <!-- <span>Quote on home</span> -->
+            
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<div class="menu-primary-menu-container">
@@ -417,7 +417,7 @@ jQuery('.faq-list-one h2').click(function(){
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <p>Copyright 2020 © Quote on home</p>
+                            <p>Copyright 2020 © Cut Power Build</p>
                         </div>
                     </div>
                 </div>
