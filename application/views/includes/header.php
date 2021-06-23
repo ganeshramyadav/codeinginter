@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php echo 'Cut Power Build : '.$pageTitle; ?></title>
+    <title><?php echo 'Cut Power Bill : '.$pageTitle; ?></title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.4 -->
     <link href="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -44,7 +44,7 @@
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>CPB </b>AS</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>Cut Power Build Admin </b>AS</span>
+          <span class="logo-lg"><b>Cut Power Bill Admin </b>AS</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">

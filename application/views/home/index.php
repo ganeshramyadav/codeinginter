@@ -38,8 +38,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 
-<link rel = "icon" href = "<?php echo base_url(); ?>assets/quote/image/cut-power-build.png" type = "image/*">
-<title>Cut Power Build</title>
+<link rel = "icon" href = "<?php echo base_url(); ?>assets/quote/image/cut-power-bill.png" type = "image/*">
+<title>Cut Power Bill</title>
 
 		
 		<style type="text/css">
@@ -75,7 +75,7 @@ img.emoji {
 		</div>
 		<div class="navbar-header" >
 			
-			<a class="navbar-brand" style="max-width: 95px; height: auto;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/cut-power-build.png" alt="logo" class="img-responsive" />            
+			<a class="navbar-brand" style="max-width: 95px; height: auto;" href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/quote/image/cut-power-bill.png" alt="logo" class="img-responsive" />            
             </a>
             
 		</div>
@@ -417,7 +417,7 @@ jQuery('.faq-list-one h2').click(function(){
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <p>Copyright 2020 © Cut Power Build</p>
+                            <p>Copyright 2020 © Cut Power Bill</p>
                         </div>
                     </div>
                 </div>
