@@ -39,7 +39,7 @@
 
 
 <link rel = "icon" href = "<?php echo base_url(); ?>assets/quote/image/cut-power-bill.png" type = "image/*">
-<title>Cut Power Bill</title>
+<title>CutPowerBill</title>
 
 		
 		<style type="text/css">
@@ -417,7 +417,7 @@ jQuery('.faq-list-one h2').click(function(){
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <p>Copyright 2020 © Cut Power Bill</p>
+                            <p>Copyright 2020 © CutPowerBill</p>
                         </div>
                     </div>
                 </div>
