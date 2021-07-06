@@ -4,7 +4,7 @@
         <div class="pull-right hidden-xs">
           <b></b> Admin System 
         </div>
-        <strong>Copyright &copy; 2020-2021 <a href="<?php echo base_url(); ?>">CutPowerBill </a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2020-2021 <a href="<?php echo base_url(); ?>">Admin </a>.</strong> All rights reserved.
     </footer>
     
     <script src="<?php echo base_url(); ?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
