@@ -55,6 +55,7 @@ $route['api/user/(:num)'] = 'api/users/id/$1'; // Example 4
 $route['api/user/(:num)(\.)([a-zA-Z0-9_-]+)(.*)'] = 'api/users/id/$1/format/$3$4'; // Example 8
 
 $route['default_controller'] = "home";
+$route['home/tncp'] = "home/tncp";
 $route['login'] = "login";
 $route['404_override'] = 'error_404';
 $route['translate_uri_dashes'] = FALSE;

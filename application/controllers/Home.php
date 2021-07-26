@@ -24,6 +24,10 @@ class Home extends CI_Controller
         $this->load->view('home/index');
     }
 
+    public function tncp(){
+        $this->load->view('home/tncp');
+    }
+
     public function insertRecord(){
 
             $name       = strtolower($this->security->xss_clean($this->input->post("Name_First")));
