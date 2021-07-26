@@ -75,6 +75,8 @@ $route['logout'] = 'user/logout';
 $route['userdataListing'] = 'user/userdataListing';
 $route['userdataListing/(:num)'] = "user/userdataListing/$1";
 
+$route['exportToCSV'] = "export/exportCSV";
+
 
 $route['userListing'] = 'user/userListing';
 $route['userListing/(:num)'] = "user/userListing/$1";

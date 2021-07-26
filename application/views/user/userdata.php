@@ -47,9 +47,10 @@
                     <div class="box-tools">
                         <div class="row">
                             <div class="col-md-6" >
-                                <!-- <div class="input-group-btn">
-                                    <a href="<?php base_url()?>export/export" class="btn btn-success btn-sm">Export</a>
-                                </div> -->
+                                <div class="input-group-btn">
+                                    <a href='<?= base_url() ?>exportToCSV' class="btn btn-success btn-sm">Export</a><br><br>
+                                    <!-- <a href="<?php base_url()?>export/export" class="btn btn-success btn-sm">Export</a> -->
+                                </div>
                             </div>
                             <!-- https://xpertphp.com/how-to-export-data-in-excel-and-csv-files-using-codeigniter/ -->
                             <div class="col-md-6">
@@ -79,7 +80,7 @@
                         <!-- <th>State</th> -->
                         <!-- <th>Country</th> -->
                         <th>Sms</th>
-                        <th>zipcode</th>
+                        <th>Zipcode</th>
                         <th>Created On</th>
                         <th>Action</th>
                     </tr>
