@@ -80,6 +80,7 @@
                         <!-- <th>State</th> -->
                         <!-- <th>Country</th> -->
                         <th>Sms</th>
+                        <th>Audio Url</th>
                         <th>Zipcode</th>
                         <th>Created On</th>
                         <th>Action</th>
@@ -101,6 +102,7 @@
                         <!-- <td><?php //echo $record->state ?></td> -->
                         <!-- <td><?php //echo $record->country ?></td> -->
                         <td><?php echo $record->sms ?></td>
+                        <td><?php echo $record->audio_url ?></td>
                         <td><?php echo $record->zipcode ?></td>
                         
                         <td><?php echo date("d-m-Y", strtotime($record->created_at)) ?></td>

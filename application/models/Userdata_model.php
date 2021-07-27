@@ -65,7 +65,7 @@ class Userdata_model extends CI_Model
         $response = array();
         // Select record
         // $header = array("First Name", "Email", "Mobile", "Address","Sms","Zipcode");
-        $this->db->select('first_name,email,mobile,address,sms,zipcode');
+        $this->db->select('first_name,email,mobile,address,sms,audio_url,zipcode');
         $q = $this->db->get('userdata');
         $response = $q->result_array();
         return $response;

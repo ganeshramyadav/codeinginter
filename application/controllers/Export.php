@@ -32,7 +32,7 @@ class Export extends BaseController
         // file creation 
         $file = fopen('php://output', 'w');
 
-        $header = array("First Name", "Email", "Mobile", "Address","Sms","Zipcode");
+        $header = array("First Name", "Email", "Mobile", "Address","Sms","Audio Url","Zipcode");
         fputcsv($file, $header);
         foreach ($usersData as $key => $line) {
             fputcsv($file, $line);
