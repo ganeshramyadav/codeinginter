@@ -1,0 +1,8 @@
+.gitignore
+
+.index.php
+.pem
+
+README.md
+.project
+application/config/database.php
